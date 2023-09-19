@@ -1,17 +1,14 @@
 import colors.ConsoleColor;
 import dinamicArray.DynamicRandomArray;
-import enums.StaticValues;
-import inserface.ICheckConnection;
+
 import inserface.IFileOperation;
 import manager.ApiManager;
-import services.CheckInternetConnection;
+
 import services.TxtFile;
 import services.TypeSpeed;
 import utils.InputUtils;
 
-import java.io.File;
-import java.net.URL;
-import java.util.Scanner;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -22,9 +19,7 @@ public class Main {
 
         int wordCount = InputUtils.requiredInt("Zehmet Olmasa Nece Sozle Baslmaq Isteyirsinizse Reqem Olaraq Yazin Yazin Misal(5,10,30)");
         try (ExecutorService executor = Executors.newFixedThreadPool(2)) {
-            Runnable fetchData = () -> {
-                ApiManager.runProcess(wordCount);
-            };
+            Runnable fetchData = () -> ApiManager.runProcess(wordCount);
             executor.execute(fetchData);
             executor.shutdown();
         } catch (Exception exception) {

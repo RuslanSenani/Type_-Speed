@@ -4,7 +4,6 @@ import colors.ConsoleColor;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class InputUtils {
 

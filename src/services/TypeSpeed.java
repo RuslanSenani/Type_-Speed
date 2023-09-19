@@ -24,8 +24,6 @@ public class TypeSpeed {
 
 
     public static double WPM(double millisecond) {
-//        Yazma Hızı (WPM) = (100 / 5) * 60 = 120 WPM
-//        Doğruluk Oranı (%) = (90 / 100) * 100 = 90%
 
         double WPM = ((getSuccessWordCount() + getSuccessWordCount()) / millisecond * 60);
         return WPM;
